@@ -1,0 +1,13 @@
+pip install --user virtualenv
+
+mkdir venv
+
+python -m virtualenv venv -p /home/rachmani/python3.5/bin/python3.5
+
+source venv/bin/activate
+
+pip install spacy
+
+python -m spacy download en
+
+python infoextract.py $1
